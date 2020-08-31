@@ -15,7 +15,7 @@ def index():
 
 @app.route('/chatible', methods=['POST']) 
 def chatible():
-    Chatible.handleUser(request.form["senderId"],int(time.time()*10e4),request.form['msg'],request.form['name'],request.form['profile_pic'],request.form['gender'])
+    Chatible.handleUser(request.form['senderId'],int(time.time()*10e4),request.form['msg'],request.form['name'],request.form['profile_pic'],request.form['gender'])
     return "1";
 
 @app.route('/getImage',methods=["GET"])
